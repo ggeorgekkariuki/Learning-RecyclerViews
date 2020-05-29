@@ -45,7 +45,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserModelViewH
 
     @Override
     public int getItemCount() {
-        return 0;
+//        Find the size of the whole list - this size will be used to find the position of an individual data item that needs to be displayed
+        return mUserModelList.size();
     }
 
     public class UserModelViewHolder extends RecyclerView.ViewHolder{
