@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
         mToolbar = findViewById(R.id.toolbar);
 
 //        An application may choose to designate a Toolbar as the action bar for an Activity using the setActionBar() method.
-        setSupportActionBar(mToolbar);
+        this.setSupportActionBar(mToolbar);
+//        Prohibit the app from setting the Application-wide/Manifest title as Title
+        this.getSupportActionBar().setTitle("");
     }
 }
