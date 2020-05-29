@@ -7,10 +7,17 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 //    Creating fields
     Toolbar mToolbar;
     RecyclerView mRecyclerView;
+//    A List of Users from the UserModel
+    List<UserModel> userModelList = new ArrayList<>();
+//    The data of users
+    String[] names = {"Richard", "Dawson", "Mary", "Hermoine", "Weasley", "Kingsley"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,5 +38,13 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        This is used as a divider between items of a LinearLayoutManager
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+
+//        Pass the data to the UserModel List
+        for(String name: names){
+//            Pass the data into the constructor to create instances of the UserModel
+            UserModel userModel = new UserModel(name);
+//            Add the userModel object to the List
+            userModelList.add(userModel);
+        }
     }
 }
