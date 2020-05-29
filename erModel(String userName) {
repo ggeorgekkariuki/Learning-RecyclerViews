@@ -1,0 +1,71 @@
+[33mcommit 19a902c23168ade2d1e813219dc0a4ca77dea772[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Sat May 30 00:42:10 2020 +0300
+
+    Adding a list of users, passing the users into the UserModel, and passing the UserModel instances to a List of UserModel
+
+[33mcommit 3f4dce0147e209164a9c9fd91ff42b6224981257[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Sat May 30 00:30:14 2020 +0300
+
+    Created a class to hold our Users constructor, getter and setter methods
+
+[33mcommit 6072a13f335163eb772bb42d4971734b5b7cee3e[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Sat May 30 00:25:05 2020 +0300
+
+    Adding a LayoutManager and a Divider for items in the data
+
+[33mcommit b7083a7ece81ac4c62b27b925cd356db8e4b1696[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 23:53:52 2020 +0300
+
+    set title of the ActionBar to None
+
+[33mcommit 389134cab16cb19a05dc1d200776b32a0a9352ad[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 23:47:58 2020 +0300
+
+    Find a reference for the toolbar and initialising it to the Action Bar for the application
+
+[33mcommit a31e433d55dce242457d78921554969c9b40cba5[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 23:26:33 2020 +0300
+
+    Adding RecyclerView widget, nested in the LinearLayout, to the activity_main.xml
+
+[33mcommit 3a5b50d929ea7f77eba6426a8a618b80e9e60aab[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 23:17:58 2020 +0300
+
+    Adding the recyclerview_bg as the background to the second LineraLayout
+
+[33mcommit bb2d4c2f25ea1cdcb6a5309750e5f958238de4e5[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 23:15:10 2020 +0300
+
+    Adding a custom background to be used for the RecyclerView
+
+[33mcommit 87db95a4a65b652b015b0761aefe883d6ebf9e98[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 23:10:16 2020 +0300
+
+    Modifying activity_main.xml
+
+[33mcommit fc948ec2da1ec53f52b755b2ac5167ee328ca23f[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 22:49:55 2020 +0300
+
+    Adding a custom background via drawable
+
+[33mcommit da0a63ec8be2fb5d8d8749670c3e4ef0b1cdcc61[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 22:38:22 2020 +0300
+
+    Changed the styles.xml 'theme' to NoActionBar
+
+[33mcommit 67406d4bc7fafc013f18a7703cbcfbc86cddf65d[m
+Author: ggeorgekkariuki <gconsummer.gk@gmail.com>
+Date:   Fri May 29 22:36:16 2020 +0300
+
+    Adding values/colors.xml to the project

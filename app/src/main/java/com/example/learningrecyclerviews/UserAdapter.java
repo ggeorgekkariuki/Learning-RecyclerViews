@@ -15,11 +15,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserModelViewH
      */
 
 //    Variables for the constructor
-    private List<UserModel> mUserModels;
+    private List<UserModel> mUserModelList;
     private Context mContext;
 
-    public UserAdapter(List<UserModel> userModels) {
-        this.mUserModels = userModels;
+    public UserAdapter(List<UserModel> userModelList) {
+        this.mUserModelList = userModelList;
     }
 
     @NonNull
