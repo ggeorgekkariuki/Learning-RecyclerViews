@@ -5,6 +5,8 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -44,8 +46,17 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserModelViewH
         ViewHolder is a static inner class in our Adapter which holds references to the relevant view's.
         One ViewHolder object is created for every time the onCreateViewHolder is called.
          */
+//        Variables to be used in the creating the view
+        TextView tvPrefix;
+        TextView tvUsername;
+        ImageView imIcon;
+
         public UserModelViewHolder(@NonNull View itemView) {
             super(itemView);
+//            References for the individual item view to be used for a single data entry
+            tvPrefix = itemView.findViewById(R.id.tvPrefix);
+            tvUsername = itemView.findViewById(R.id.tvUsername);
+            imIcon = itemView.findViewById(R.id.imageView);
         }
     }
 }
