@@ -39,8 +39,22 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserModelViewH
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserAdapter.UserModelViewHolder userModelViewHolder, int i) {
-
+    public void onBindViewHolder(@NonNull UserAdapter.UserModelViewHolder userModelViewHolder, int position) {
+         /*
+        The layout manager then binds the view holder to its data.
+        It does this by calling the adapter's onBindViewHolder() method, and passing
+        the view holder's position in the RecyclerView.
+        The onBindViewHolder() method needs to fetch the appropriate data, and use it to fill in
+        the view holder's layout.
+         */
+//         Find the data in the UserModel at the current position
+         UserModel userModel = mUserModelList.get(position);
+//         Use this userModel object to fill in variables that will later be used to fill in the individual views nested in the ViewHolder
+        String username = userModel.getUserName();
+        String prefix = userModel.getUserName().substring(0,1);
+//        Use the variables to fill in the ViewHolder views eg tvUsername and tvPrefix
+        userModelViewHolder.tvUsername.setText(username);
+        userModelViewHolder.tvPrefix.setText(prefix);
     }
 
     @Override
