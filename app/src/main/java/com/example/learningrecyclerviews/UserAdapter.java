@@ -20,9 +20,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserModelViewH
 //    Variables for the constructor
     private List<UserModel> mUserModelList;
     private Context mContext;
+    private SelectedUser mSelectedUser;
 
-    public UserAdapter(List<UserModel> userModelList) {
+    public UserAdapter(List<UserModel> userModelList, SelectedUser selectedUser) {
         this.mUserModelList = userModelList;
+        this.mSelectedUser = selectedUser;
     }
 
     @NonNull
@@ -61,6 +63,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserModelViewH
     public int getItemCount() {
 //        Find the size of the whole list - this size will be used to find the position of an individual data item that needs to be displayed
         return mUserModelList.size();
+    }
+
+    public interface SelectedUser{
+        /*
+        An interface is a collection of abstract methods. An interface contains behaviors that a class implements.
+         */
+        void selectedUser(UserModel usermodel);
     }
 
     public class UserModelViewHolder extends RecyclerView.ViewHolder{
