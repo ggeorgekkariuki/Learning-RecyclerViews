@@ -10,7 +10,7 @@ import android.support.v7.widget.Toolbar;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements UserAdapter.SelectedUser{
 //    Creating fields
     Toolbar mToolbar;
     RecyclerView mRecyclerView;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 //        The LayoutManager is responsible for measuring and positioning item views within a
 //        RecyclerView as well as determining the policy for when to recycle item views that are
 //        no longer visible to the user.
+//        LinearLayoutManager arranges the items in a one-dimensional list. Using a RecyclerView with LinearLayoutManager provides functionality like the older ListView layout
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 //        This is used as a divider between items of a LinearLayoutManager
         mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
@@ -49,8 +50,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
 //        Adapter obtains a reference to the data being passed
-        mUserAdapter = new UserAdapter(userModelList);
+        mUserAdapter = new UserAdapter(userModelList, this);
 //        Attaching the UserAdapter to the RecyclerView
         mRecyclerView.setAdapter(mUserAdapter);
+    }
+
+    @Override
+    public void selectedUser(UserModel usermodel) {
+//        Create a new Activity once user is selected.x
     }
 }
