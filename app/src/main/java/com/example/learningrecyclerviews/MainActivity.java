@@ -93,6 +93,8 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.Selec
 
             @Override
             public boolean onQueryTextChange(String s) {
+//                The adapter can filter characters and display them
+                mUserAdapter.getFilter().filter(s);
                 return true;
             }
         });
