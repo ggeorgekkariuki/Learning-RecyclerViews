@@ -97,7 +97,19 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.Selec
             }
         });
 
-
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        /*
+        When the user selects an item from the options menu (including action items in the app bar), the system calls this method.
+         You can identify the item by calling getItemId() and match this ID against known menu items to perform the appropriate action
+         */
+        switch (item.getItemId()){
+            case R.id.search_view:
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
