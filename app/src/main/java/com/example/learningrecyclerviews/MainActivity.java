@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,5 +64,40 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.Selec
 //        Create a new Activity once user is selected.
 //        Pass an intent from MainActivity to the SelectedUserActivity and pass a UserModel object
         startActivity(new Intent(MainActivity.this, SelectedUserActivity.class).putExtra("EXTRA_DATA", usermodel));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        /*
+        Overriding this method allows us to specify the options menu for MainActivity and
+        inflate our menu resource R.menu.menu
+        You can also add menu items using add() and retrieve items with findItem()
+         */
+//        Inflate Menu Resource
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+//        Adding a menu item
+        MenuItem searchMenuItem = menu.findItem(R.id.search_view);
+
+//        A SearchView widget  provides a user interface for the user to enter a search query and submit a request to a search provider.
+//        An action view is an action that provides rich functionality within the app bar. For example, a search action view allows the user to type their search text in the app bar, without having to change activities or fragments.
+        SearchView searchView = (SearchView) searchMenuItem.getActionView();
+//        Sets the specified maximum width in pixels, if set. Returns zero if no maximum width was specified.
+        searchView.setMaxWidth(Integer.MAX_VALUE);
+
+//        Sets a listener for user actions within the SearchView.
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return true;
+            }
+        });
+
+
+        return true;
     }
 }
