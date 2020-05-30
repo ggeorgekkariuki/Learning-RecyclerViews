@@ -14,10 +14,11 @@ public class MainActivity extends AppCompatActivity {
 //    Creating fields
     Toolbar mToolbar;
     RecyclerView mRecyclerView;
+    UserAdapter mUserAdapter;
 //    A List of Users from the UserModel
     List<UserModel> userModelList = new ArrayList<>();
 //    The data of users
-    String[] names = {"Richard", "Dawson", "Mary", "Hermoine", "Weasley", "Kingsley"};
+    String[] names = {"Richard Brandson", "Dawson Creek", "Mary Magdalene", "Hermoine Granger", "Weasley Knight", "Kingsley White"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,5 +47,10 @@ public class MainActivity extends AppCompatActivity {
 //            Add the userModel object to the List
             userModelList.add(userModel);
         }
+
+//        Adapter obtains a reference to the data being passed
+        mUserAdapter = new UserAdapter(userModelList);
+//        Attaching the UserAdapter to the RecyclerView
+        mRecyclerView.setAdapter(mUserAdapter);
     }
 }
