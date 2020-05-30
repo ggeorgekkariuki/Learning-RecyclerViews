@@ -57,6 +57,6 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.Selec
 
     @Override
     public void selectedUser(UserModel usermodel) {
-//        Create a new Activity once user is selected.x
+//        Create a new Activity once user is selected.
     }
 }
