@@ -1,5 +1,6 @@
 package com.example.learningrecyclerviews;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -58,5 +59,7 @@ public class MainActivity extends AppCompatActivity implements UserAdapter.Selec
     @Override
     public void selectedUser(UserModel usermodel) {
 //        Create a new Activity once user is selected.
+//        Pass an intent from MainActivity to the SelectedUserActivity and pass a UserModel object
+        startActivity(new Intent(MainActivity.this, SelectedUserActivity.class).putExtra("EXTRA_DATA", usermodel));
     }
 }
