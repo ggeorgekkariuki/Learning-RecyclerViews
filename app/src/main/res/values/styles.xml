@@ -12,6 +12,6 @@
 
 <!--    These styles belong to the toolbar-->
     <style name="Toolbar">
-        <item name="editTextColor">@color/colorWhite</item>
+        <item name="android:editTextColor">@color/colorWhite</item>
     </style>
 </resources>
