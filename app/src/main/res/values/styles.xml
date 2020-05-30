@@ -10,4 +10,8 @@
         <item name="colorControlNormal">@color/colorWhite</item>
     </style>
 
+<!--    These styles belong to the toolbar-->
+    <style name="Toolbar">
+        <item name="editTextColor">@color/colorWhite</item>
+    </style>
 </resources>
