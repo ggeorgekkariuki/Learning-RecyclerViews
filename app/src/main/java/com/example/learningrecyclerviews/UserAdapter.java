@@ -89,6 +89,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserModelViewH
             tvPrefix = itemView.findViewById(R.id.tvPrefix);
             tvUsername = itemView.findViewById(R.id.tvUsername);
             imIcon = itemView.findViewById(R.id.imageView);
+
+//            Once the ViewHolder is tapped
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+//                    Find the position of the Adapter on the item that has been clicked on
+                    mSelectedUser.selectedUser(mUserModelList.get(getAdapterPosition()));
+                }
+            });
         }
     }
 }
